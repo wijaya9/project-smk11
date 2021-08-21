@@ -14,7 +14,7 @@
 
         public function insert()
         {
-            $sql = "insert into siswa (nama, nis, alamat, jk, rombel) values ('$this->$nama', '$this->$nis', '$this->$alamat', '$this->$jk', '$this->$rombel')";
+            $sql = "insert into siswa (nama, nis, alamat, jk, rombel) values ('$this->nama', '$this->nis', '$this->alamat', '$this->jk', '$this->rombel')";
             $this->conn->query($sql);
         }
 
