@@ -5,11 +5,11 @@
     //proses simpan data
     if(isset($_POST['submit_simpan']))
     {
-        $model->$nama = $_POST['nama'];
-        $model->$nis = $_POST['nis'];
-        $model->$alamat = $_POST['alamat'];
-        $model->$jk = $_POST['jk'];
-        $model->$rombel = $_POST['rombel'];
+        $model->nama = $_POST['nama'];
+        $model->nis = $_POST['nis'];
+        $model->alamat = $_POST['alamat'];
+        $model->jk = $_POST['jk'];
+        $model->rombel = $_POST['rombel'];
         $model->insert();
         header('location:index.php');
     }
@@ -33,4 +33,5 @@
         $model->delete($id);
         header('location:index.php');
     }
+    
 ?>
