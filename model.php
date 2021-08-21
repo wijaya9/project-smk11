@@ -33,9 +33,9 @@
             }
         }
 
-        public function find($id)
+        public function find()
         {
-            $sql = "Select * from siswa where id='$id'";
+            $sql = "Select * from siswa where id='$this->id'";
             $bind = $this->conn->query($sql);
             while ($obj = $bind->fetch_object())
             {
@@ -48,15 +48,15 @@
             }
         }
 
-        public function update($id, $nama, $nis, $alamat, $jk, $rombel)
+        public function update()
         {
-            $sql = "update siswa set nama='$nama', nis='$nis', alamat='$alamat', jk='$jk', rombel='$rombel' where id='$id'";
+            $sql = "update siswa set nama='$this->nama', nis='$this->nis', alamat='$this->alamat', jk='$this->jk', rombel='$this->rombel' where id='$this->id'";
             $this->conn->query($sql);
         }
 
-        public function delete($id)
+        public function delete()
         {
-            $sql = "Delete from siswa where id='$id'";
+            $sql = "Delete from siswa where id='$this->id'";
             $this->conn->query($sql);
         }
 

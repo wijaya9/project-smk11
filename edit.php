@@ -1,8 +1,8 @@
 <?php
     include 'model.php';
-    $id = $_GET['id'];
     $model = new Model();
-    $data = $model->find($id);
+    $model->id = $_GET['id'];
+    $data = $model->find();
 ?>
 
 <!doctype html>
