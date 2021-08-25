@@ -17,20 +17,20 @@
     //proses edit data
     if(isset($_POST['submit_edit']))
     {
-        $model->id = $_POST['id'];
+        $id = $_POST['id'];
         $model->nama = $_POST['nama'];
         $model->nis = $_POST['nis'];
         $model->alamat = $_POST['alamat'];
         $model->jk = $_POST['jk'];
         $model->rombel = $_POST['rombel'];
-        $model->update();
+        $model->update($id);
         header('location:index.php');
     }
 
     //proses delete data
     if (isset($_GET['id'])) {
-        $model->id = $_GET['id'];
-        $model->delete();
+        $id = $_GET['id'];
+        $model->delete($id);
         header('location:index.php');
     }
     
